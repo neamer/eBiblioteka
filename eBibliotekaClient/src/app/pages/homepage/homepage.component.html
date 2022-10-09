@@ -1,0 +1,17 @@
+<div class="homepage">
+  <app-landing-page *ngIf="!loading && accountType == null"></app-landing-page>
+  <app-homepage-user
+    *ngIf="!loading && accountType == getAccountType.User"
+  ></app-homepage-user>
+  <app-homepage-librarian
+    *ngIf="!loading && accountType == getAccountType.Library"
+  ></app-homepage-librarian>
+  <div class="homepage-loading" *ngIf="loading">
+    <div class="lds-ring lds-ring-large loading-search">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</div>

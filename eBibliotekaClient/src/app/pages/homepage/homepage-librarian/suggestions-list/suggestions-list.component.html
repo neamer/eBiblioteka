@@ -1,0 +1,36 @@
+<div class="overlay-shadow">
+  <div class="overlay-item upload-wrapper">
+    <div class="upload-header">
+      <app-heading text="PREPORUKE" size="m"></app-heading>
+      <div class="upload-close-wrapper">
+        <img
+          src="assets/svg/close.svg"
+          alt="close-icon"
+          class="close-icon"
+          (click)="closeOverlay()"
+        />
+      </div>
+    </div>
+
+    <div class="notification-list">
+      <div class="notification-list-item" *ngFor="let item of items">
+        <div class="heading">
+          <div class="sender">
+            {{ item.title }}
+            <span> • {{ item.author }} </span>
+          </div>
+          <img
+            src="assets/svg/close.svg"
+            alt="close-icon"
+            class="delete-icon"
+            (click)="removeSuggestion(item.id)"
+          />
+        </div>
+        <div class="text">
+          Naslov je preporučio korisnik
+          {{ item.user.firstName + " " + item.user.lastName }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<header>
+  <div class="header-content">
+    <img class="header-logo" src="assets/svg/logo-main.svg" routerLink="/" />
+    <app-header-unauthorized
+      class="header-links"
+      *ngIf="accountType == null"
+      url="{{ url }}"
+    ></app-header-unauthorized>
+    <app-header-user
+      class="header-links"
+      *ngIf="accountType === getAccountType.User"
+      url="{{ url }}"
+    ></app-header-user>
+    <app-header-librarian
+      class="header-links"
+      *ngIf="accountType === getAccountType.Library"
+      url="{{ url }}"
+    ></app-header-librarian>
+  </div>
+  <div class="helper-button" (click)="setShowHelper(true)">?</div>
+</header>
+
+<app-helper *ngIf="showHelper" (onClose)="setShowHelper(false)"></app-helper>
+
+<div class="header-margin"></div>

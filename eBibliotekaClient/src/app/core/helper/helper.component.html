@@ -1,0 +1,368 @@
+<div class="overlay-shadow" [ngStyle]="{ top: getScrollPos() + 'px' }">
+  <div class="overlay-item main-wrapper">
+    <div class="header">
+      <app-heading text="INFORMACIJE O PROKETU" size="m"></app-heading>
+      <div class="close-wrapper">
+        <img
+          src="assets/svg/close.svg"
+          alt="close-icon"
+          class="close-icon"
+          (click)="close()"
+        />
+      </div>
+    </div>
+    <div class="main-grid">
+      <div class="sidebar">
+        <div (click)="setSection(1)">Uvod</div>
+        <div (click)="setSection(2)">Koncept</div>
+        <div (click)="setSection(3)">Dizajn</div>
+        <div (click)="setSection(4)">Tehnologije</div>
+        <div (click)="setSection(5)">Proces razvoja</div>
+        <div (click)="setSection(6)">Funkcionalnosti</div>
+        <div (click)="setSection(7)">Raporedjela posla</div>
+      </div>
+      <div class="main-content">
+        <!-- SECTIONS -->
+
+        <div class="section" *ngIf="section == 1">
+          <div class="content-header">Uvod</div>
+          <div class="content">
+            Primarni razlozi kreiranja ove aplikacije su seminarski radovi za
+            predmete Razvoj softvera 1 i Interakcija čovjek-računar. Aplikacija
+            nije responsivna zbog vremenskog ograničenja. Preporučene su
+            veličine monitora 1366 x 768 i iznad. <br /><br />
+            Članovi tima su : Amer Nezirić i Amar Nezirić. <br /><br />
+
+            Informacije o aplikaciji su podijeljene u sljedeće dijelove :<br />
+
+            <ul>
+              <li>
+                <span>koncept</span> - ideja aplikacije, tipovi korisnika i
+                osnovne funcije
+              </li>
+              <li>
+                <span>Dizajn</span> - Proces kreiranja i analiza dizajna i
+                korištenih principa i uzorka
+              </li>
+              <li>
+                <span>Tehnologije</span> - Popis korištenih alata i tehnologija
+              </li>
+              <li>
+                <span>Proces razvoja</span> - Način na koji smo organizirali
+                proces razvoja
+              </li>
+              <li>
+                <span>Funkcionalnosti</span> - Prikaz svih funkcionalnosti koje
+                aplikacija pokriva
+              </li>
+              <li>
+                <span>Raspodjela posla</span> - Tabela koja prikazuje koji su
+                udio imali članovi tima pri izradi specifičnih dijelova
+                aplikacije
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section" *ngIf="section == 2">
+          <div class="content-header">Koncept</div>
+          <div class="content">
+            eBiblioteka razlikuje dvije vrste korisnika, od kojih zavisi svrha
+            korištenja aplikacije. <br /><br />
+            Bibliotekama se pruža automatizovan način upravljanja poslovanjem i
+            uz to znatno olakšava posao bibliotekara. Bibliotekari mogu
+            upravljati profilom biblioteke, autorima, knjigama i korisnicima.
+            <br /><br />
+
+            Krajnjim korisnicima se pruža mogućnost korištenja usluga biblioteka
+            bez potrebe da ih fizički posjete. Korisnici mogu pretražiti
+            biblioteke, učlaniti se i iznajmiti knjigu online.
+          </div>
+        </div>
+
+        <div class="section" *ngIf="section == 3">
+          <div class="content-header">Dizajn</div>
+          <div class="content">
+            U sklopu izrade seminarskog rada iz predmeta Interakcija
+            čovjek-računar, definisali smo opis i zahtjeve korisnika i na osnovu
+            toga smo kreirali popis potrebnih funkcionalnosti za aplikaciju.
+            Nakon toga je slijedio proces izrade wireframe-a koji je služio kao
+            orijentir za organizaciju sadržaja.
+
+            <img src="assets/img/helper/mockup_libraryDetail.jpg" />
+
+            Sljedeći korak je bio detaljniji dizajn interakcije u slučajima gdje
+            je to bilo potrebno. Dalje se na osnovu svega izradio high-fidelity
+            dizajn za kompletnu aplikaciju.
+
+            <img src="assets/img/helper/highFidelity_libraryDetail.jpg" />
+
+            Također smo bili dužni uraditi detaljnu analizu dizajna koju možete
+            pogledati na sljedećem linku :
+            <a
+              href="https://edufit-my.sharepoint.com/:b:/g/personal/amer_neziric_edu_fit_ba/EXeezqpenDpHj2og7VfNeE0BFXiij2ZN17zHhdLZTnZTKQ?e=hJOKwI"
+              >eBiblioteka_HCI_ZavrsniIzvjestaj</a
+            >
+          </div>
+        </div>
+
+        <div class="section" *ngIf="section == 4">
+          <div class="content-header">Tehnologije</div>
+          <div class="content">
+            Većinu tehnologija smo morali koristiti zbog zadovoljavanja
+            kriterija za predmet Razvoj softvera. <br />
+            <br />
+
+            <span>Backend</span>
+            <ul>
+              <li>Microsoft Visual Studio 2022 razvojno okruženje</li>
+              <li>.NET 5.0</li>
+              <li>Microsoft Entity Framework Core 5.0</li>
+            </ul>
+            <br />
+
+            <span>Baza podataka</span>
+            <ul>
+              <li>Microsoft SQL Server 2019</li>
+              <li>Microsoft SQL Server Management Studio</li>
+            </ul>
+            <br />
+
+            <span>Frontend</span>
+            <ul>
+              <li>Visual Studio Code</li>
+              <li>Angular 13</li>
+              <li>Typescript</li>
+            </ul>
+            <br />
+          </div>
+        </div>
+
+        <div class="section" *ngIf="section == 5">
+          <div class="content-header">Proces razvoja</div>
+          <div class="content">
+            Koristili smo SCRUM framework uz Azure DevOps za organizaciju
+            procesa razvoja, kao što je predviđeno predmetom Razvoj Softvera 1.
+            Aplikaciju smo uspjeli realizirati izvršavanjem 88 task-ova, koji su
+            organizirani u 35 user-storya, u sklopu 10 sprintova.
+          </div>
+        </div>
+
+        <div class="section" *ngIf="section == 6">
+          <div class="content-header">Funkcionalnosti</div>
+          <div class="content">
+            <br />
+            <span>Bibliotekari</span>
+            <ul>
+              <li>Registracija/Login</li>
+              <li>Upravljanje profilom biblioteke</li>
+              <li>Upravljanje lokacijom biblioteke</li>
+              <li>Upravljanje privatnim profilom</li>
+              <li>Upravljanje autorima</li>
+              <li>Dodavanje knjiga</li>
+              <li>Pretraga knjiga</li>
+              <li>Upravljanje knjigama</li>
+              <li>Upravljanje tagovima za knjige</li>
+              <li>Pregled dostupnosti knjige</li>
+              <li>Upravljanje serijalima</li>
+              <li>Upravljanje preporukama bibliotekara</li>
+              <li>Pretraga članova</li>
+              <li>Slanje notifikacija članovima</li>
+              <li>Evidencija povratka knjige</li>
+              <li>Evidencija uplate za članarinu</li>
+              <li>Evidencija iznajmljivanja</li>
+            </ul>
+            <br />
+            <span>Korisnici</span>
+            <ul>
+              <li>Registracija/Login</li>
+              <li>Upravljanje profilom</li>
+              <li>Pretraga biblioteka</li>
+              <li>Učlanjivanje u biblioteku</li>
+              <li>Pretraga knjiga</li>
+              <li>Iznajmljivanje knjiga</li>
+              <li>Pregled dostupnosti knjige</li>
+              <li>Upravljanje notifikacijama</li>
+              <li>Slanje preporuka novih naslova</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section" *ngIf="section == 7">
+          <div class="content-header">Raspodjela posla</div>
+          <div class="content">
+            <table>
+              <tr class="table-heading">
+                <th></th>
+                <th class="name-col">Amer Nezirić</th>
+                <th class="name-col">Amar Nezirić</th>
+              </tr>
+
+              <tr class="table-row">
+                <td>
+                  Dizajn logotipa, vizuelnog identiteta, wireframe-a i high
+                  fidelity mockupa
+                </td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Header i footer</td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Registracija i login uz JWT</td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>
+                  Upravljanje lokacijom i google maps integracija na frontendu
+                </td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Upravljanje slikama (google cloud)</td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Naslovna stranica za bibliotekare</td>
+                <td class="table-row-check"></td>
+                <td class="table-row-check">X</td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Naslovna stranica za logirane korisnike</td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Stranica korisničkog računa</td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Pretraga biblioteka u vidu liste i preko karte</td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>
+                  Pregled stranice biblioteke, upravljanje profilom biblioteke
+                </td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>
+                  Upravljanje ponudama za članstvo i učlanjivanje u biblioteku
+                </td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Upravljanje autorima</td>
+                <td class="table-row-check"></td>
+                <td class="table-row-check">X</td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Upravljanje knjigama i pregled knjiga</td>
+                <td class="table-row-check"></td>
+                <td class="table-row-check">X</td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Pretraga knjiga</td>
+                <td class="table-row-check"></td>
+                <td class="table-row-check">X</td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Upravljanje tagovima za knjige</td>
+                <td class="table-row-check"></td>
+                <td class="table-row-check">X</td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Posuđivanje knjige</td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Pretraga korisnika</td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>
+                  Pregled detaljnih informacija o korisniku, posuđenim knjigama
+                  i uplatama
+                </td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Evidencija povratka knjige</td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Evidencija uplate za članarinu</td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Evidencija posuđivanja knjige</td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Upravljanje serijalima i pregled serijala</td>
+                <td class="table-row-check"></td>
+                <td class="table-row-check">X</td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Upravljanje preporukama bibliotekara</td>
+                <td class="table-row-check"></td>
+                <td class="table-row-check">X</td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Slanje notifikacija članovima</td>
+                <td class="table-row-check"></td>
+                <td class="table-row-check">X</td>
+              </tr>
+
+              <tr class="table-row">
+                <td>Slanje i pregled preporuka za nabavku novih naslova</td>
+                <td class="table-row-check">X</td>
+                <td class="table-row-check"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

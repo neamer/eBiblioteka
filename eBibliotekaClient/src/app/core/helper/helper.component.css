@@ -1,0 +1,144 @@
+.main-wrapper {
+  position: relative;
+  width: 880px;
+  margin: auto;
+  top: 100px;
+  box-sizing: border-box;
+  padding: 30px;
+  padding-top: 25px;
+}
+
+.header {
+  display: flex;
+}
+
+.header:first-child app-heading {
+  flex-grow: 2;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  height: 500px;
+  margin-top: 30px;
+}
+
+.sidebar {
+  border-right: 1px solid #dddddd;
+}
+
+.sidebar > div {
+  padding: 15px;
+  color: #303030;
+  font-family: "Roboto-Light";
+  font-size: 16px;
+}
+
+.sidebar > div:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.content-header {
+  color: #303030;
+  font-family: "Roboto-Bold";
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.section {
+  box-sizing: border-box;
+  padding-left: 30px;
+  overflow-y: auto;
+  height: 500px;
+}
+
+.section::-webkit-scrollbar {
+  width: 8px;
+  margin-left: 20px;
+}
+
+/* Track */
+.section::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+
+/* Handle */
+.section::-webkit-scrollbar-thumb {
+  background: #e3e3e3;
+  border: 50%;
+  margin: 2px;
+}
+
+.content {
+  color: #555555;
+  font-family: "Roboto-Light";
+  line-height: 150%;
+  font-size: 16px;
+}
+
+.content * {
+  color: #555555;
+  font-family: "Roboto-Light";
+  line-height: 150%;
+  font-size: 16px;
+}
+
+ul {
+  padding-left: 40px;
+}
+
+.content span {
+  font-family: "Roboto-Bold";
+}
+
+.content img {
+  width: 100%;
+}
+
+.content table {
+}
+
+table,
+tr,
+td {
+  border: none;
+  border-collapse: collapse;
+}
+
+table {
+  border-radius: 5px;
+  border-bottom: 2px solid #01987a;
+}
+
+.table-heading {
+  background-color: #01987a;
+}
+
+.table-heading > th {
+  font-family: "WorkSans-Bold";
+  font-size: 18px;
+  color: white;
+  padding: 10px 0;
+}
+
+.table-row > td {
+  padding: 10px;
+  background-color: #ffffff;
+}
+.table-row:nth-of-type(odd) > td {
+  background-color: #f3f3f3;
+  border-top: 1px solid rgb(216, 216, 216);
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.table-row > .table-row-check {
+  font-family: "WorkSans-Bold";
+  font-size: 18px;
+  color: #303030;
+  text-align: center;
+}
+
+.name-col {
+  width: 150px;
+}

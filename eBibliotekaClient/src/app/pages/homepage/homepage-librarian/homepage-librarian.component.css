@@ -1,0 +1,159 @@
+.librarian-homepage {
+  background-color: #e6e6e6;
+  padding: 20px 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.librarian-grid {
+  display: grid;
+  grid-template-columns: 75fr 25fr;
+  column-gap: 20px;
+}
+
+.dashboard {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 7px;
+}
+
+.stats,
+.suggestions {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 7px;
+}
+
+.stats {
+  margin-bottom: 20px;
+}
+
+.welcome {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.dashboard-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.dashboard-button {
+  font-family: "Roboto-Light";
+  color: #303030;
+  font-size: 24px;
+  text-align: center;
+  padding: 60px 0;
+  border: 1px solid #d6d6d6;
+  border-radius: 7px;
+  transition: border-color 0.2s;
+}
+
+.dashboard-button:hover {
+  border-color: #303030;
+  cursor: pointer;
+}
+
+/* STATS */
+.offer-grid {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.grid-item {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #e3e3e3;
+  box-sizing: border-box;
+  position: relative;
+  color: #303030;
+  font-size: 22px;
+  font-family: "Roboto-Bold";
+}
+
+.grid-item-title {
+  top: -10px;
+  position: absolute;
+  font-size: 16px;
+  color: #787e86;
+  background-color: #f9f9f9;
+  padding: 0 5px;
+  font-family: "Roboto-Light";
+}
+
+.title-books {
+  left: calc(50% - 43px);
+}
+
+.title-price {
+  left: calc(50% - 48px);
+}
+
+.title-time {
+  left: calc(50% - 34px);
+}
+
+.grid-item-flex {
+  display: flex;
+  justify-content: center;
+  padding-top: 3px;
+}
+
+.grid-item-text {
+  flex-grow: 2;
+  text-align: right;
+  justify-content: center;
+}
+
+.grid-icon {
+  height: 26px;
+}
+
+/* SUGGESTIONS */
+
+.notif-wrapper {
+  display: block;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 12px;
+  position: relative;
+}
+
+.notif-title {
+}
+
+.notif-content {
+  font-family: "Roboto-Light";
+  padding-top: 10px;
+}
+
+.no-suggestions {
+  font-family: "Roboto-Light";
+  font-size: 24px;
+  color: #b9b9b9;
+  margin-top: 20px;
+}
+
+.suggestions-button {
+  font-family: "Roboto-Light";
+  color: #303030;
+  font-size: 20px;
+  text-align: center;
+  padding: 12px 0;
+  border: 1px solid #e3e3e3;
+  border-radius: 7px;
+  transition: border-color 0.2s;
+  margin-top: 12px;
+}
+
+.suggestions-button:hover {
+  border-color: #303030;
+  cursor: pointer;
+}

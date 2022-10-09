@@ -1,0 +1,32 @@
+<div class="overlay-shadow" [ngStyle]="{ top: getScrollPos() + 'px' }">
+  <div class="overlay-item upload-wrapper">
+    <div class="upload-header">
+      <app-heading text="PREPORUČI NASLOV" size="m"></app-heading>
+      <div class="upload-close-wrapper">
+        <img
+          src="assets/svg/close.svg"
+          alt="close-icon"
+          class="close-icon"
+          (click)="closeOverlay()"
+        />
+      </div>
+    </div>
+
+    <div class="form-control-small">
+      <label for="title">Naslov</label>
+      <input type="text" id="title" name="title" [(ngModel)]="data.title" />
+    </div>
+
+    <div class="form-control-small">
+      <label for="author">Autor</label>
+      <input type="text" id="author" name="author" [(ngModel)]="data.author" />
+    </div>
+
+    <button
+      class="button button-dark submit-notif"
+      (click)="submitSuggestion()"
+    >
+      SPREMI
+    </button>
+  </div>
+</div>

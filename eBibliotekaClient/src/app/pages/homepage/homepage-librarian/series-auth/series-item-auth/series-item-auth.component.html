@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div class="series-item">{{ seriesItem.name }}</div>
+
+  <div class="btn-wrapper">
+    <button
+      class="btn button-ghost-dark"
+      routerLink="serijal/{{ seriesItem.id }}"
+    >
+      KNJIGE
+    </button>
+    <button class="btn button-ghost-dark btn-remove" (click)="deleteSeries()">
+      UKLONI
+    </button>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+.notif-wrapper {
+  display: block;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.notif-title {
+}
+
+.notif-content {
+  font-family: "Roboto-Light";
+  padding-top: 10px;
+}
+
+.no-items {
+  font-family: "Roboto-Light";
+  font-size: 24px;
+  color: #b9b9b9;
+  margin-top: 20px;
+}
+
+.date-wrapper {
+  position: absolute;
+  font-family: "Roboto-Bold";
+  right: 15px;
+  top: -5px;
+  background-color: #303030;
+  color: white;
+  font-size: 15px;
+  padding: 7px;
+  border-radius: 0 0 5px 5px;
+}
+
+.notif-loading {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.notif-title > span {
+  font-family: "Roboto-Light";
+}

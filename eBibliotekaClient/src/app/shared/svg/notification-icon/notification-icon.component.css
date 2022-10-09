@@ -1,0 +1,12 @@
+.notification-icon-header {
+  width: 32px;
+  height: 32px;
+  fill: #cfcfcf;
+}
+.notification-icon-header:hover {
+  fill: #fff;
+  cursor: pointer;
+}
+.notification-icon-header-active {
+  fill: #fff;
+}

@@ -1,0 +1,22 @@
+<div *ngIf="!loading">
+  <div *ngIf="items == null || items.length === 0" class="no-items">
+    Trenutno nema obavještenja
+  </div>
+  <div *ngFor="let item of items" class="notif-wrapper">
+    <div class="notif-title">
+      {{ item.title }} <span> • {{ item.libraryName }}</span>
+    </div>
+    <div class="notif-content">{{ getFormattedContent(item.text) }}</div>
+    <div class="date-wrapper">
+      {{ FormatDate(item.date) }}
+    </div>
+  </div>
+</div>
+<div class="loading-wrapper notif-loading" *ngIf="loading">
+  <div class="lds-ring lds-ring-large loading-search">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>

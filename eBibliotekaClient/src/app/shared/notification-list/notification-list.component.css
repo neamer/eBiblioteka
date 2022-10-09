@@ -1,0 +1,90 @@
+.upload-close-wrapper {
+  flex-grow: 2;
+  text-align: right;
+}
+.upload-wrapper {
+  position: relative;
+  top: 100px;
+  left: calc(50vw - 350px);
+  border-radius: 7px;
+  box-sizing: border-box;
+  width: 700px;
+  padding: 20px;
+  padding-top: 15px;
+}
+
+.upload-header {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.add-author-wrapper > input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 25px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: "Roboto-Light";
+  font-size: 16px;
+}
+.add-author-wrapper > button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.notification-list {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+/* width */
+.notification-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.notification-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.notification-list::-webkit-scrollbar-thumb {
+  background: #acacac;
+}
+
+/* Handle on hover */
+.notification-list::-webkit-scrollbar-thumb:hover {
+  background: #b9b9b9;
+}
+.notification-list-item {
+  margin-top: 15px;
+  border: #e3e3e3 1px solid;
+  border-radius: 5px;
+  position: relative;
+}
+.text {
+  padding: 5px 10px;
+  padding-bottom: 15px;
+  font-family: "Roboto-Light";
+}
+.sender {
+  padding: 10px;
+}
+.heading {
+}
+.delete-icon {
+  height: 15px;
+  width: 15x;
+  top: 0px;
+  position: absolute;
+  right: 0px;
+  margin: 10px;
+}
+
+.sender > span {
+  font-family: "Roboto-Light";
+}

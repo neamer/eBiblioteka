@@ -1,0 +1,13 @@
+.homepage {
+  position: relative;
+}
+
+.homepage-loading {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 400px 0;
+  text-align: center;
+  background-color: #e6e6e6;
+}

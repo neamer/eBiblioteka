@@ -1,0 +1,124 @@
+.upload-close-wrapper {
+  flex-grow: 2;
+  text-align: right;
+}
+.upload-wrapper {
+  position: relative;
+  top: 100px;
+  left: calc(50vw - 250px);
+  border-radius: 7px;
+  box-sizing: border-box;
+  width: 500px;
+  padding: 30px;
+  padding-top: 20px;
+}
+
+.upload-header {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.upload-separator {
+  border-top: 1px solid #e3e3e3;
+}
+
+.add-author-wrapper {
+  margin: 10px;
+}
+.search-authors-wrapper {
+  margin: 10px 0px;
+  display: flex;
+  border: 1px solid #e3e3e3;
+  background-color: white;
+  border-radius: 5px;
+}
+.form-control-small {
+  margin-bottom: 25px;
+}
+
+.form-control-small > label {
+  display: block;
+  color: #a5a5a5;
+  font-size: 13px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  font-family: "Roboto-Bold";
+}
+.form-control-small input {
+  box-sizing: border-box;
+  color: #303030;
+  font-size: 14px;
+  padding: 14px;
+  width: 100%;
+  border: 1px solid #dadada;
+  background-color: #f9f9f9;
+  border-radius: 7px;
+}
+
+.form-control-small > input::placeholder {
+  font-family: "Roboto-Light";
+}
+
+.authors-result {
+  height: 45vh;
+  overflow-y: scroll;
+  border-radius: 5px;
+  background-color: white;
+}
+.text {
+  width: 400px;
+  height: 15px;
+}
+.add-author-wrapper > input,
+.add-author-wrapper > textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 25px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: "Roboto-Light";
+  font-size: 16px;
+}
+.add-author-wrapper > button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+/* width */
+.authors-result::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.authors-result::-webkit-scrollbar-track {
+  background: #cfcfcf;
+}
+
+/* Handle */
+.authors-result::-webkit-scrollbar-thumb {
+  background: #00d8b1;
+}
+
+/* Handle on hover */
+.authors-result::-webkit-scrollbar-thumb:hover {
+  background: #04e9bf;
+}
+
+.submit-notif {
+  width: 200px;
+  text-align: center;
+}
+
+.tarea {
+  height: 200px;
+  padding: 20px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: "Roboto-Light";
+  font-size: 16px;
+}

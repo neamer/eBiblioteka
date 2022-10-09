@@ -1,0 +1,108 @@
+<div class="librarian-homepage">
+  <div class="librarian-grid wrapper">
+    <div class="main-side">
+      <div class="dashboard">
+        <app-heading text="Dobro došli" size="l"></app-heading>
+        <div class="dashboard-grid">
+          <div class="dashboard-button" (click)="setShowBook(true)">
+            DODAJ KNJIGU
+          </div>
+          <div class="dashboard-button" routerLink="/knjige">SVE KNJIGE</div>
+          <div class="dashboard-button" (click)="setShowAuthors(true)">
+            AUTORI
+          </div>
+          <div class="dashboard-button" (click)="setShowSeries(true)">
+            SERIJALI
+          </div>
+          <div class="dashboard-button" routerLink="/korisnici">ČLANOVI</div>
+          <div class="dashboard-button" routerLink="/profil">MOJ PROFIL</div>
+          <div class="dashboard-button" routerLink="/biblioteka">
+            BIBLIOTEKA
+          </div>
+          <div
+            class="dashboard-button posudba"
+            routerLink="/evidencija-posudbe"
+          >
+            EVIDENTIRAJ POSUDBU
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="side">
+      <div class="stats">
+        <div class="offer-grid">
+          <div class="grid-item">
+            <div class="grid-item-title title-books">Broj knjiga</div>
+            <div class="grid-item-flex">
+              <app-book-icon
+                class="grid-icon"
+                svgClass="membership-offer-icon"
+              ></app-book-icon>
+              <div class="grid-item-text">{{ stats.noOfBooks }}</div>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <div class="grid-item-title title-books">Broj korisnika</div>
+            <div class="grid-item-flex">
+              <app-users-icon
+                class="grid-icon"
+                svgClass="membership-offer-icon"
+              ></app-users-icon>
+              <div class="grid-item-text">{{ stats.noOfMembers }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="suggestions">
+        <app-heading text="PREPORUKE" size="m"></app-heading>
+        <div
+          *ngIf="suggestions == null || suggestions.length === 0"
+          class="no-suggestions"
+        >
+          Trenutno nema obavještenja
+        </div>
+        <div *ngFor="let item of suggestions" class="notif-wrapper">
+          <div class="notif-title">
+            {{ item.title }} <span> • {{ item.author }}</span>
+          </div>
+          <div class="notif-content">
+            Naslov je preporučio korisnik
+            {{ item.user.firstName + " " + item.user.lastName }}
+          </div>
+        </div>
+        <div
+          class="suggestions-button"
+          (click)="setShowSuggestionsList(true)"
+          *ngIf="suggestions !== null && suggestions.length !== 0"
+        >
+          SVE PREPORUKE
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-authors-form
+  *ngIf="showAuthors"
+  (onCloseOverlay)="setShowAuthors(false)"
+></app-authors-form>
+<app-authors-form
+  *ngIf="showAuthors"
+  (onCloseOverlay)="setShowAuthors(false)"
+></app-authors-form>
+<app-add-book
+  *ngIf="showAddBook"
+  (onCloseOverlay)="setShowBook(false)"
+></app-add-book>
+
+<app-series-auth
+  *ngIf="showSeries"
+  (onCloseOverlay)="setShowSeries(false)"
+></app-series-auth>
+
+<app-suggestions-list
+  *ngIf="showSuggestionsList"
+  (onActionComplete)="setShowSuggestionsList(false)"
+>
+</app-suggestions-list>
