@@ -1,6 +1,6 @@
 # eBiblioteka
 
-Link na live aplikaciju : https://p2121.app.fit.ba/
+Link na live aplikaciju : https://stellar-semifreddo-c1d823.netlify.app/
 
 Primarni razlozi kreiranja ove aplikacije su seminarski radovi za predmete Razvoj softvera 1 i Interakcija čovjek-računar.
 Klikom na "?" u donjem desnom uglu, otvara se pop-up sa dodatnim informacijama o projektu.
